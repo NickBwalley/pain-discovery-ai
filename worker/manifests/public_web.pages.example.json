@@ -1,0 +1,12 @@
+{
+  "max_items": 10,
+  "pages": [
+    {
+      "url": "https://community.example.com/public-discussion",
+      "permission_url": "https://community.example.com/terms",
+      "permission_confirmed": false,
+      "public_discussion_confirmed": false,
+      "reviewed_at": "REPLACE_WITH_UTC_REVIEW_TIMESTAMP"
+    }
+  ]
+}

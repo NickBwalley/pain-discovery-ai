@@ -1,0 +1,14 @@
+project_id = "pain-discovery-ai"
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+enable_signup = true
+additional_redirect_urls = ["http://localhost:3000/auth/callback"]
+
+[auth.email]
+enable_signup = true
+enable_confirmations = true
+
+[db]
+major_version = 17

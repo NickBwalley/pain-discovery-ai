@@ -1,0 +1,243 @@
+{
+  "$defs": {
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "exact_excerpt": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Exact Excerpt",
+          "type": "string"
+        },
+        "source_item_id": {
+          "title": "Source Item Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "exact_excerpt",
+        "source_item_id"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "is_relevant": {
+      "title": "Is Relevant",
+      "type": "boolean"
+    },
+    "relevance_reason": {
+      "title": "Relevance Reason",
+      "type": "string"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "pain_summary": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Pain Summary"
+    },
+    "problem_category": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Problem Category"
+    },
+    "pain_evidence": {
+      "items": {
+        "$ref": "#/$defs/Evidence"
+      },
+      "maxItems": 8,
+      "title": "Pain Evidence",
+      "type": "array"
+    },
+    "customer_segment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Customer Segment"
+    },
+    "buyer_role": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Buyer Role"
+    },
+    "buyer_role_evidence": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Buyer Role Evidence"
+    },
+    "existing_workaround": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Existing Workaround"
+    },
+    "existing_product": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Existing Product"
+    },
+    "alternative_requested": {
+      "title": "Alternative Requested",
+      "type": "boolean"
+    },
+    "severity": {
+      "anyOf": [
+        {
+          "maximum": 5,
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Severity"
+    },
+    "frequency": {
+      "anyOf": [
+        {
+          "maximum": 5,
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Frequency"
+    },
+    "evidence_of_spend": {
+      "anyOf": [
+        {
+          "maximum": 5,
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Evidence Of Spend"
+    },
+    "buyer_accessibility": {
+      "anyOf": [
+        {
+          "maximum": 5,
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Buyer Accessibility"
+    },
+    "urgency_signal": {
+      "enum": [
+        "explicit",
+        "inferred",
+        "unknown"
+      ],
+      "title": "Urgency Signal",
+      "type": "string"
+    },
+    "spend_signal": {
+      "enum": [
+        "explicit",
+        "inferred",
+        "unknown"
+      ],
+      "title": "Spend Signal",
+      "type": "string"
+    },
+    "business_impact": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Business Impact"
+    },
+    "missing_information": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing Information",
+      "type": "array"
+    }
+  },
+  "required": [
+    "is_relevant",
+    "relevance_reason",
+    "confidence",
+    "pain_summary",
+    "problem_category",
+    "pain_evidence",
+    "customer_segment",
+    "buyer_role",
+    "buyer_role_evidence",
+    "existing_workaround",
+    "existing_product",
+    "alternative_requested",
+    "severity",
+    "frequency",
+    "evidence_of_spend",
+    "buyer_accessibility",
+    "urgency_signal",
+    "spend_signal",
+    "business_impact",
+    "missing_information"
+  ],
+  "title": "Extraction",
+  "type": "object"
+}

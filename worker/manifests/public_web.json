@@ -1,0 +1,13 @@
+{
+  "source_id": "public_web",
+  "source_name": "Approved public pages",
+  "access_method": "Exact administrator-configured HTTPS public discussion pages; no link following",
+  "allowed_purpose": "Permissioned public discussion research; approval must cover storage and AI analysis",
+  "authorization_state": "disabled_until_domain_permission_recorded",
+  "automated_fetch": false,
+  "rate_limit": "At least 2 seconds per request; honor robots crawl-delay/request-rate; default 10 pages per run",
+  "retention_days": 7,
+  "retention_policy": "Source policy expiry, deletion and tombstones apply",
+  "attribution": "Original page URL; author and original date unknown by default",
+  "restrictions": "Public HTTPS only, exact page allowlist, fresh permission review within 30 days, robots must be available and allow the page, DNS/IP pinning, TLS verification, no redirects, no credentials or queries, 1MB decoded response cap. Stop on access challenges and 401/403/429. G2/Capterra/Reddit/LinkedIn/Discord/Slack require separate authorized integrations and are excluded."
+}

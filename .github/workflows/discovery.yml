@@ -1,0 +1,30 @@
+name: Optional research worker
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 6 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: private-discovery-worker
+  cancel-in-progress: false
+jobs:
+  discover:
+    if: vars.DISCOVERY_SCHEDULE_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      AI_BASE_URL: ${{ vars.AI_BASE_URL || 'https://openrouter.ai/api/v1' }}
+      AI_API_KEY: ${{ secrets.AI_API_KEY }}
+      AI_MODEL: ${{ vars.AI_MODEL }}
+      AI_MAX_CALLS_PER_RUN: '10'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r worker/requirements.lock
+      - run: pip install --no-deps -e worker
+      - run: pain-discovery scheduled --max-jobs 5

@@ -1,0 +1,13 @@
+{
+  "source_id": "manual",
+  "source_name": "Permitted manual import",
+  "access_method": "Operator-pasted excerpt and original HTTPS attribution URL",
+  "allowed_purpose": "Research with operator-confirmed permission; public professional discussion only",
+  "authorization_state": "per_import_operator_confirmation",
+  "automated_fetch": false,
+  "rate_limit": "At most 12000 characters per excerpt; discovery item/AI caps still apply",
+  "retention_days": 30,
+  "retention_policy": "Honor permission-specific shorter expiry via source policy; remove source and dependents on request",
+  "attribution": "Original public source URL; public author handle/date only when known",
+  "restrictions": "No URL metadata fetch, private communities, personal contact details, sensitive personal data, or unpermitted excerpts; professional identity is entered and verified manually"
+}

@@ -1,0 +1,15 @@
+{
+  "source_id": "capterra",
+  "source_name": "Capterra",
+  "access_method": "Future expressly authorized API/export; no crawler implemented",
+  "allowed_purpose": "Only collection, storage and analysis covered by express written permission",
+  "authorization_state": "permission_required",
+  "automated_fetch": false,
+  "rate_limit": "No requests until authorized",
+  "retention_days": 7,
+  "retention_policy": "Must be reconciled with written permission before activation",
+  "attribution": "Original Capterra review URL and author as permitted",
+  "terms_url": "https://www.capterra.com/legal/terms-of-use/",
+  "terms_reviewed_at": "2026-10-27",
+  "restrictions": "General User Terms section 10 requires express prior written consent for automated collection and restricts AI use. No bypasses; excluded from the general public-page connector."
+}

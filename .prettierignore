@@ -1,0 +1,9 @@
+node_modules
+.next
+.venv
+.python
+.npm-cache
+.uv-cache
+package-lock.json
+AGENTS.md
+supabase/migrations

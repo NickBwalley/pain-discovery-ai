@@ -1,0 +1,15 @@
+{
+  "source_id": "reddit",
+  "source_name": "Reddit",
+  "access_method": "Future authorized Reddit API only; not implemented",
+  "allowed_purpose": "Explicitly approved research use case; commercial API use requires a separate agreement",
+  "authorization_state": "not_authorized",
+  "automated_fetch": false,
+  "rate_limit": "No requests until authorized and API limits configured",
+  "retention_days": 7,
+  "retention_policy": "Approved storage/deletion requirements must be implemented before activation",
+  "attribution": "Original Reddit post/comment and author as required",
+  "terms_url": "https://redditinc.com/policies/data-api-terms",
+  "terms_reviewed_at": "2026-10-27",
+  "restrictions": "No private communities, scraping fallback, model training, quota evasion or access-control bypass. Excluded from general public-page connector."
+}

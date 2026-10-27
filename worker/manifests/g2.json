@@ -1,0 +1,15 @@
+{
+  "source_id": "g2",
+  "source_name": "G2",
+  "access_method": "Future licensed API/export; no crawler implemented",
+  "allowed_purpose": "Only research explicitly covered by G2 permission, including storage and AI processing",
+  "authorization_state": "permission_required",
+  "automated_fetch": false,
+  "rate_limit": "No requests until authorized",
+  "retention_days": 7,
+  "retention_policy": "Must be reconciled with a future license before activation",
+  "attribution": "Original G2 review URL and author as licensed",
+  "terms_url": "https://legal.g2.com/terms-of-use",
+  "terms_reviewed_at": "2026-10-27",
+  "restrictions": "Disabled: no license/authorization supplied. Terms restrict content extraction/use and derived data. Do not bypass anti-bot controls or use the general public-page connector."
+}

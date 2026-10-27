@@ -1,0 +1,16 @@
+{
+  "source_id": "hacker_news",
+  "source_name": "Hacker News",
+  "access_method": "Official Firebase public API v0; fixed HTTPS host only",
+  "allowed_purpose": "Bounded public discussion research; no profile enrichment, training, article crawling or messaging",
+  "authorization_state": "official_public_api",
+  "automated_fetch": true,
+  "endpoint": "https://hacker-news.firebaseio.com/v0",
+  "operator_rate_limit": "At most four requests/second, sequential, 60 items/run",
+  "enforcement": "Stop on 401/403/429, bounded 5xx retries, never follow redirects or source URLs",
+  "retention_days": 30,
+  "retention_policy": "Store normalized/redacted permitted excerpt only; expiry hides content; daily purge deletes dependents; explicit removal tombstones source identifiers/hash",
+  "attribution": "Original Hacker News item URL, author handle, original timestamp",
+  "reference": "https://github.com/HackerNews/API",
+  "policy_note": "Official API documentation describes public access; no blanket claim of third-party content ownership. Operator must honor removal and applicable source requirements. Database source_policies is the runtime kill switch."
+}
